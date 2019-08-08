@@ -53,7 +53,7 @@ server {
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
         fastcgi_index index.php;
         include fcgi.conf;
-        fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+        fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_read_timeout 300;
         fastcgi_ignore_headers X-Accel-Expires Expires Cache-Control;
@@ -78,7 +78,7 @@ server {
     # include restrictions.conf;
     # We only enable this option if either W3TC is in effect on a WordPress install
     # Or you manage an override from your application root.
-	# An example would be that of Admin Tools for Joomla!
+    # An example would be that of Admin Tools for Joomla!
     # include /srv/www/sitename/public/nginx.conf;
 
 }
